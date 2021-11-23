@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;  
+    flex-direction: column; /* .header em cima e embaixo o slider */
+    height: 100vh; /* 100% da altura do display do dispositivo*/
+    background-color: #ccc;
+}
+
+.header {
+    height: 50px;
+    background-color: #520d0d;
+}
+
+.slider {
+    flex: 1;
+    overflow: hidden; /* Qualquer coisa que passar do tamanho da tela vai cortar, pois não queremos barra de rolagem */
+}
+
+.slider--controls {
+    position: absolute;
+    z-index: 99; /* Para os controles ficarem acima da foto */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider--control {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.slider--width {
+    height: 100%;
+    display: flex; /* Para as imagens ficarem uma ao lado da outra*/
+    transition: all ease 0.3s;
+}
+
+.slider--item {
+    width: 100vw;
+    height: inherit; /* vai herdar do slider--width */
+    background-position: center; /* imagem ficar sempre centralizada */
+    background-size: cover; /* Para imagem cobrir toda a área */
+}
+
+.img1 {
+    background-image: url('../imagens/gato.jpg');
+}
+
+.img2 {
+    background-image: url('../imagens/cachorro.jpg');
+}
+
+.img3 {
+    background-image: url('../imagens/cavalo.jpg');
+}
