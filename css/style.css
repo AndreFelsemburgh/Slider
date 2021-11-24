@@ -17,14 +17,18 @@ header {
 }
 
 .slider {
-    flex: 1;
+    /*Para tamanhos fixos*/
+   /* width: 1080px;
+    height: 500px; */
+    flex: 1; /* PARA TELAS CHEIAS */
     overflow: hidden; /* Qualquer coisa que passar do tamanho da tela vai cortar, pois não queremos barra de rolagem */
+    margin: 0 auto;
 }
 
 .slider--controls {
     position: absolute;
     z-index: 99; /* Para os controles ficarem acima da foto */
-    width: 100%;
+    width: 100%; /* REMOVER PARA FAZER A LARGURA FIXA */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,6 +58,15 @@ header {
     height: inherit; /* vai herdar do slider--width */
     background-position: center; /* imagem ficar sempre centralizada */
     background-size: cover; /* Para imagem cobrir toda a área */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider--item h2 {
+    color: #fff;
+    font-size: 5rem;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
 .img1 {
